@@ -10,6 +10,7 @@ int main(void)
 	char u;
 	for  (u = 'a' ; u <= 'z' ; u++)
 	{
+
 		if (u != 'e' && u != 'q')
 			putchar(u);
 	}
