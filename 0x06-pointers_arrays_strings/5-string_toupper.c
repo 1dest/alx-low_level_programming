@@ -1,29 +1,19 @@
 #include "main.h"
 /**
- * cap_string - cap all strings
- * @s: input strings
- * Return: dest pointer
-  */
-char *cap_string(char *s)
+ * string_toupper - function for my code
+ *  @str: string
+ *  Return: char
+*/
+char *string_toupper(char *str)
 {
-	int count = 0, i;
-	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i;
 
-	if (*(s + count) >= 97 && *(s + count) <= 122)
-		*(s + count) = *(s + count) - 32;
-	count++;
-	while (*(s + count) != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (i = 0; i < 13; i++)
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			if (*(s + count) == separators[i])
-			{
-				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
-					*(s + (count + 1)) = *(s + (count + 1)) - 32;
-				break;
-			}
+			str[i] = str[i] - 32;
 		}
-		count++;
 	}
-	return (s);
+	return (str);
 }
