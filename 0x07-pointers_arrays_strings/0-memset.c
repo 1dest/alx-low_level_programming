@@ -5,7 +5,7 @@
  * @b: set value
  * @n: memory byte
  * Return: dest
- * */
+  */
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
